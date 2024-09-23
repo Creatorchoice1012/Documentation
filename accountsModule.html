@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Module Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        pre {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #e67e22;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .code-block {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .copy-code {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Account Module Documentation</h1>
+
+        <h2>Clone the Repository</h2>
+        <pre>
+bash
+Copy code:
+git clone https://github.com/your-username/account-module.git
+        </pre>
+
+        <h2>Navigate into the project directory and install dependencies:</h2>
+        <pre>
+bash
+Copy code:
+cd account-module
+npm install
+        </pre>
+
+        <h2>Usage</h2>
+        <p>To integrate the account module into your project, import the necessary components and set up the module as shown below.</p>
+
+        <h3>Sign-Up Component Example</h3>
+        <div class="code-block">
+            js
+            <pre>
+import React from 'react';
+import { SignUpComponent } from 'account-module';
+
+const App = () => {
+  return (
+    <SignUpComponent
+      username={true}
+      emailField={true}
+      passwordField={true}
+      confirmPasswordField={true}
+      rememberMeCheckbox={true}
+      signInScreen="LoginScreen"
+      verifyScreen="VerifyScreen"
+    />
+  );
+};
+
+export default App;
+            </pre>
+        </div>
+
+        <h3>Sign-In Component Example</h3>
+        <div class="code-block">
+            js
+            <pre>
+import React from 'react';
+import { SignInComponent } from 'account-module';
+
+const App = () => {
+  return (
+    <SignInComponent
+      username={true}
+      passwordField={true}
+      signUpScreen="SignUpScreen"
+    />
+  );
+};
+
+export default App;
+            </pre>
+        </div>
+
+        <h2>Props</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>username</td>
+                    <td>boolean</td>
+                    <td>Display username input field</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>emailField</td>
+                    <td>boolean</td>
+                    <td>Display email input field</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>mobileNumber</td>
+                    <td>boolean</td>
+                    <td>Display mobile number input field</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>passwordField</td>
+                    <td>boolean</td>
+                    <td>Display password input field</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>confirmPasswordField</td>
+                    <td>boolean</td>
+                    <td>Display confirm password input field</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>rememberMeCheckbox</td>
+                    <td>boolean</td>
+                    <td>Display 'Remember Me' checkbox</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>signUpButton</td>
+                    <td>boolean</td>
+                    <td>Display sign-up button</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>signInScreen</td>
+                    <td>string</td>
+                    <td>Navigation screen for sign-in button</td>
+                    <td>LoginScreen</td>
+                </tr>
+                <tr>
+                    <td>verifyScreen</td>
+                    <td>string</td>
+                    <td>Navigation screen after OTP verification</td>
+                    <td>VerifyScreen</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Customization</h2>
+        <p>You can customize the appearance and behavior of the form by passing props like <code>username</code>, <code>emailField</code>, and more.</p>
+
+        <div class="code-block">
+            js
+            <pre>
+<SignUpComponent
+  username={false} // Hides the username field
+  mobileNumber={true} // Shows the mobile number field
+  rememberMeCheckbox={true} // Shows 'Remember Me' checkbox
+/>
+            </pre>
+        </div>
+
+        <h3>Example Code for Sign-Up Component</h3>
+        <div class="code-block">
+            js
+            <pre>
+import React from 'react';
+import { SignUpComponent } from 'account-module';
+
+const App = () => {
+  return (
+    <SignUpComponent
+      username={true}
+      emailField={true}
+      passwordField={true}
+      confirmPasswordField={true}
+      rememberMeCheckbox={true}
+      signUpButton={true}
+    />
+  );
+};
+
+export default App;
+            </pre>
+        </div>
+
+    </div>
+
+</body>
+</html>
