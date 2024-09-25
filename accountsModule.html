@@ -84,17 +84,17 @@
 
         <h2>Clone the Repository</h2>
         <pre>
-bash
-Copy code:
-git clone https://github.com/your-username/account-module.git
+<code>
+git clone https://github.com/Creatorchoice1012/AccountsModule.git
+</code>
         </pre>
 
         <h2>Navigate into the project directory and install dependencies:</h2>
         <pre>
-bash
-Copy code:
+<code>
 cd account-module
 npm install
+</code>
         </pre>
 
         <h2>Usage</h2>
@@ -102,14 +102,13 @@ npm install
 
         <h3>Sign-Up Component Example</h3>
         <div class="code-block">
-            js
-            <pre>
+            <pre><code>
 import React from 'react';
 import { SignUpComponent } from 'account-module';
 
 const App = () => {
   return (
-    <SignUpComponent
+    &lt;SignUpComponent
       username={true}
       emailField={true}
       passwordField={true}
@@ -117,33 +116,32 @@ const App = () => {
       rememberMeCheckbox={true}
       signInScreen="LoginScreen"
       verifyScreen="VerifyScreen"
-    />
+    /&gt;
   );
 };
 
 export default App;
-            </pre>
+            </code></pre>
         </div>
 
         <h3>Sign-In Component Example</h3>
         <div class="code-block">
-            js
-            <pre>
+            <pre><code>
 import React from 'react';
 import { SignInComponent } from 'account-module';
 
 const App = () => {
   return (
-    <SignInComponent
+    &lt;SignInComponent
       username={true}
       passwordField={true}
       signUpScreen="SignUpScreen"
-    />
+    /&gt;
   );
 };
 
 export default App;
-            </pre>
+            </code></pre>
         </div>
 
         <h2>Props</h2>
@@ -218,38 +216,36 @@ export default App;
         <p>You can customize the appearance and behavior of the form by passing props like <code>username</code>, <code>emailField</code>, and more.</p>
 
         <div class="code-block">
-            js
-            <pre>
-<SignUpComponent
+            <pre><code>
+&lt;SignUpComponent
   username={false} // Hides the username field
   mobileNumber={true} // Shows the mobile number field
   rememberMeCheckbox={true} // Shows 'Remember Me' checkbox
-/>
-            </pre>
+/&gt;
+            </code></pre>
         </div>
 
         <h3>Example Code for Sign-Up Component</h3>
         <div class="code-block">
-            js
-            <pre>
+            <pre><code>
 import React from 'react';
 import { SignUpComponent } from 'account-module';
 
 const App = () => {
   return (
-    <SignUpComponent
+    &lt;SignUpComponent
       username={true}
       emailField={true}
       passwordField={true}
       confirmPasswordField={true}
       rememberMeCheckbox={true}
       signUpButton={true}
-    />
+    /&gt;
   );
 };
 
 export default App;
-            </pre>
+            </code></pre>
         </div>
 
     </div>
