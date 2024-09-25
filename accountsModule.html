@@ -38,6 +38,39 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .image-row .image-section {
+            flex: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 80%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -82,19 +115,39 @@
     <div class="container">
         <h1>Account Module Documentation</h1>
 
+        <!-- Image Row for Sign-In and Sign-Up Screens -->
+        <div class="image-row">
+            <div class="image-section">
+                <img src="./images/login.png" alt="Sign-In Component Screenshot">
+                <p class="image-caption">Figure 1: Sign-In Component Screenshot</p>
+            </div>
+            <div class="image-section">
+                <img src="./images/signup.png" alt="Sign-Up Component Screenshot">
+                <p class="image-caption">Figure 2: Sign-Up Component Screenshot</p>
+            </div>
+        </div>
+
+        <!-- Image Row for Verification and Forgot Password Screens -->
+        <div class="image-row">
+            <div class="image-section">
+                <img src="./images/verify.png" alt="Verification Screen Screenshot">
+                <p class="image-caption">Figure 3: Verification Screen Screenshot</p>
+            </div>
+            <div class="image-section">
+                <img src="./images/forgot.png" alt="Forgot Password Screen Screenshot">
+                <p class="image-caption">Figure 4: Forgot Password Screen Screenshot</p>
+            </div>
+        </div>
+
         <h2>Clone the Repository</h2>
         <pre>
-<code>
-git clone https://github.com/Creatorchoice1012/AccountsModule.git
-</code>
+<code>git clone https://github.com/Creatorchoice1012/AccountsModule.git</code>
         </pre>
 
         <h2>Navigate into the project directory and install dependencies:</h2>
         <pre>
-<code>
-cd account-module
-npm install
-</code>
+<code>cd account-module
+npm install</code>
         </pre>
 
         <h2>Usage</h2>
